@@ -411,69 +411,56 @@ section {
     left: 495px;
 }
 
-.portfolio-item {
+
+.main-port{
     margin-top: 40px;
 }
 
-.portfolio-img img {
-    width: 92%;
-    
-}
-
-.portfolio-img:nth-child(5) {
-    margin-top: -100px;
-}
-
-.portfolio-img:nth-child(7) {
-    margin-top: -100px;
-}
-
-
-.portfolio-img {
+.portfolio-item{
     width: 25%;
     float: left;
+}
+
+.portfolio-img {
+    margin-right: 23px;
     margin-bottom: 20px;
     position: relative;
 }
-
-.portfolio-overly {
+.portfolio-item img{
+    width: 100%;
+}
+.port-overlay{
     position: absolute;
-    background: rgb(0, 0, 0, .5);
-    opacity: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    transform: scale(0);
     transition: .5s;
 }
 
-.overly-top {
-    width: 92%;
-    height: 99%;
-    top: 0px;
-    left: 0;
-    transform: scalex(0);
+.portfolio-img:hover .port-overlay{
+    transform: scale(1);
 }
 
 
-.portfolio-img:hover .overly-top {
-    transform: scalex(1);
-}
-
-.overly-icon {
+.port-overlay a{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.overly-icon a {
-    text-align: center;
-    height: 60px;
     width: 60px;
+    height: 60px;
+    font-size: 20px;
     background: #5bc5f4;
     border-radius: 50%;
-    line-height: 60px;
-    font-size: 25px;
     color: #fff;
-    display: block;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    line-height: 60px;
+    transform: translate(-50%, -50%);
+
 }
+
 
 /*=====TEAM SECTION======*/
 #team .team-heading {
@@ -495,7 +482,7 @@ section {
 }
 
 
-#team .team-member {
+#team .team-member{
     width: 21%;
     float: left;
     background: #F1F1F1;
@@ -503,6 +490,10 @@ section {
     padding-top: 17px;
     text-align: center;
     position: relative;
+}
+
+.team-img img {
+    margin-bottom: -3px;
 }
 
 #team .team-member .team-overly {
@@ -533,7 +524,7 @@ section {
     border: 2px solid #fff;
     margin-left: 10px;
     opacity: 0;
-    transition: .2s;
+    transition: .5s;
 }
 
 #team .team-member:hover .team-overly a{
@@ -545,9 +536,6 @@ section {
     border: 2px solid transparent;
 }
 
-.team-member img {
-    margin-bottom: -3px;
-}
 
 #team .team-member .team-info {
     background: #fff;
@@ -582,6 +570,10 @@ section {
     float: left;
     text-align: center;
     margin: 0 15px;
+}
+
+testimonial-item img{
+    text-align: left;
 }
 
 #testimonial .testimonial-text {

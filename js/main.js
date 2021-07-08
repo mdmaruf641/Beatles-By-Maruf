@@ -22,9 +22,8 @@ $(function(){
     $(window).on("load", function(){
         $("#loading").delay(500) .fadeOut(2000)
     });
-});
 
-//=====JAVA SCRIPT || SKICLY MENU=====//
+    //=====SKICLY MENU=====//
 
 var headerPosition = $('#nav').offset().top;
 $(window).scroll(function(){
@@ -35,5 +34,24 @@ $(window).scroll(function(){
     else{
         $('#nav').removeClass('sticky');
     }
+    });
+
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+    })
+
+    // PORTFOLIO SECTION //
+
+    $('.main-port').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow:"<button type='button' class='slick-left slick-prev pull-left'><i class='fad fa-chevron-double-left'aria-hidden='true'></i></button>",
+        nextArrow:"<button type='button' class='slick-right slick-next pull-right'><i class='fad fa-chevron-double-right' aria-hidden='true'></i></button>"
+      });
+
+      // TEAM SECTION //
+
 });
-  
+
